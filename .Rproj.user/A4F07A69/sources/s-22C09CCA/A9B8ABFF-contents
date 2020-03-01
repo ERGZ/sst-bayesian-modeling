@@ -1,0 +1,28 @@
+---
+title: "Types of Distrubtions"
+author: "Emanuel"
+date: "2/29/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Binomial Beta Model
+
+Suppose a study is being carried out where we want to study the number of cases of high 
+blood pressure in an area of study. We define the ith person to be 1 if they exhibit high 
+blood pressure and 0 otherwise. Its clear that we can model this process using the binomial 
+distribution.
+
+$$ y | \pi \sim Binom(\pi, n) $$
+whose pdf is given by 
+
+$$ y | \pi = {n\choose y}\pi^{y}(1-\pi)^{n-y} \propto \pi^{y}(1-\pi)^{n-y}$$
+here $\pi$ is the probability of success. In order to completet the Bayesian Model we need to 
+specify a prior distrubtion for $\pi$. A candidate distribution needs to allow for the $\pi$ to 
+range from 0 to 1, we use the beta distrubtion for this.
+
+
+
